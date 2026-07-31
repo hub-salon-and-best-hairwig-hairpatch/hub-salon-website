@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Special Offers & Discounts | Hub Hair Patch</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <!-- Header Section -->
+<body class="offers-page">
+
   <header class="offers-header">
-    <a href="index.html" class="back-btn">⬅️ Back to Home</a>
-    <h1>🔥 Exclusive Salon Offers</h1>
-    <p>Limited Time Discounts on Hair Patch & Wigs</p>
+    <div class="container offers-header-inner">
+      <a href="index.html" class="back-btn">← Back to Home</a>
+      <div class="offers-intro">
+        <span class="badge">Special Offers</span>
+        <h1>Exclusive Salon Offers</h1>
+        <p>Limited-time discounts on hair patch, wigs, and beauty services.</p>
+      </div>
+    </div>
   </header>
 
-  <!-- Offers Grid Container -->
-  <main class="offers-container">
-    
-    <!-- Offer 1 -->
-    <div class="offer-card">
-      <img src="images/patch.jpeg" alt="Hair Patch Special Offer" loading="lazy">
-      <div class="offer-actions">
-        <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20claim%20Offer%201" target="_blank" class="claim-btn">
-          💬 Claim on WhatsApp
-        </a>
+  <main class="offers-page-main">
+    <div class="container">
+      <div class="offers-grid">
+        <article class="offer-card">
+          <div class="offer-media">
+            <img src="images/patch.jpeg" alt="Hair Patch Special Offer" loading="lazy">
+          </div>
+          <div class="offer-content">
+            <span class="offer-badge">Hot Deal</span>
+            <h3>Hair Patch Special</h3>
+            <p>Premium natural hair patch solutions starting from ₹2,999 with custom fitting and styling.</p>
+            <div class="offer-price">Starting at ₹2,999</div>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20claim%20Offer%201" target="_blank"
+              class="claim-btn">
+              Claim on WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="offer-card">
+          <div class="offer-media">
+            <img src="images/g1.jpeg" alt="Ladies Wig Discount" loading="lazy">
+          </div>
+          <div class="offer-content">
+            <span class="offer-badge">Limited Time</span>
+            <h3>Ladies Wig Deal</h3>
+            <p>Affordable premium wigs starting from ₹5,999 with a polished finish and comfort-first fit.</p>
+            <div class="offer-price">Starting at ₹5,999</div>
+            <a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20claim%20Offer%202" target="_blank"
+              class="claim-btn">
+              Claim on WhatsApp
+            </a>
+          </div>
+        </article>
       </div>
     </div>
-
-    <!-- Offer 2 -->
-    <div class="offer-card">
-      <img src="images/g1.jpeg" alt="Ladies Wig Discount" loading="lazy">
-      <div class="offer-actions">
-        <a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20claim%20Offer%202" target="_blank" class="claim-btn">
-          💬 Claim on WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Naya offer add karne ke liye upar wale div ko copy-paste karein aur image name badal dein -->
-
   </main>
 
-  <!-- Floating Contact Bar -->
   <div class="sticky-bottom-bar">
     <a href="tel:+918700484042" class="sticky-btn sticky-call">📞 Call Now</a>
     <a href="https://wa.me/918700484042" target="_blank" class="sticky-btn sticky-wa">💬 WhatsApp</a>
   </div>
 
 </body>
+
 </html>
