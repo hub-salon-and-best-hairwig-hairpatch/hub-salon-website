@@ -1,0 +1,406 @@
+/* ==========================================
+   HUB SALON - PROFESSIONAL STYLESHEET
+   Theme: Light background, Dark text, Premium Blue/Gold accents
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #fcfcfd;
+  --bg-card: #ffffff;
+  --text-dark: #121826;
+  --text-muted: #4d5761;
+  --primary: #8a6d1e;       /* Deep Trustworthy Blue */
+  --primary-hover: #afad1e;
+  --accent: #d97706;        /* Subtle Gold for Premium Feel */
+  --border: #e5e7eb;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+title{
+
+}
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero .badge {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid #dbeafe;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2.2rem;
+}
+
+/* --- Global Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: #f3f0f0;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Layout Container --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+/* --- Before & After Gallery --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-images {
+  display: flex;
+  position: relative;
+}
+
+.gallery-images img {
+  width: 50%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.gallery-images::after {
+  content: "VS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--text-dark);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-info {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.gallery-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+/* --- Reels Showcase Section --- */
+.center-badge {
+  display: table !important;
+  margin: 0 auto 1rem auto;
+}
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.reel-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Perfect Instagram Reel Vertical Ratio */
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-info {
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+
+.reel-info h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: var(--text-dark);
+}
+
+.reel-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.reels-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+/* --- Services Grid --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card.highlight {
+  border: 2px solid var(--primary);
+  background: linear-gradient(180deg, #beb6b6 0%, #f0f7ff 100%);
+  position: relative;
+}
+
+.service-card.highlight::before {
+  content: "OUR SPECIALTY";
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--accent);
+  color: #8b1414;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* --- Contact & Footer --- */
+footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+}
+
+footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  color: var(--text-muted);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.whatsapp-btn { background-color: #25b45a; }
+.whatsapp-btn:hover { background-color: #15803d; }
+
+.insta-btn { background-color: #e11d48; }
+.insta-btn:hover { background-color: #be123c; }
+
+.google-btn { background-color: #2563eb; }
+.google-btn:hover { background-color: #1d4ed8; }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.1rem; }
+  .nav-links { display: none; }
+  .contact-links { flex-direction: column; }
+  .btn { width: 100%; }
+}
+/* YouTube Button Styling */
+.youtube-btn {
+  background-color: #FF0000;
+  color: #ffffff;
+}
+.youtube-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Bottom & Copyright Styling */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.footer-subtext {
+  font-size: 0.78rem !important;
+  opacity: 0.8;
+}
