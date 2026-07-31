@@ -283,6 +283,9 @@ nav {
   text-align: center;
   margin-top: 2.5rem;
 }
+.video-container video {
+  cursor: pointer;
+}
 /* --- Services Grid --- */
 .services-grid {
   display: grid;
@@ -403,4 +406,12 @@ footer p {
 .footer-subtext {
   font-size: 0.78rem !important;
   opacity: 0.8;
+}
+
+/* Reviews Grid Responsive Auto-fit */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }

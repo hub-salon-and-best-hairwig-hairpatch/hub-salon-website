@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><ul>Hub Salon Best Hair Wig Hairpatch</ul></title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+ <title>Hub Salon | Best Hair Patch & Wig Specialist in India</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  // Page load hote hi Top par scroll karne ke liye
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+  // Sabhi auto-reels ko select karein
+  const reels = document.querySelectorAll('.auto-reel');
+
+  reels.forEach(video => {
+    // Har video par time check lagayein
+    video.addEventListener('timeupdate', function() {
+      // Jaise hi 30 seconds poore honge, video reset ho jayegi
+      if (this.currentTime >= 30) {
+        this.currentTime = 0;
+        this.play();
+      }
+    });
+  });
+</script>
 <body>
 
   <!-- Navigation Bar -->
@@ -25,7 +45,10 @@
   <span class="badge">⭐ 100% Natural Human Hair</span>
   <h1>Welcome to Hub Salon Best Hair Wig Hairpatch</h1>
   <p>India ka Sabse Affordable & Natural Hair Patch Solutions! Paayein 100% Natural Hairlines bina kisi Surgery ke. Ek baar aao, Naya Look paao!</p>
-  <a href="https://share.google/Y4pO1in3KwYAEolKI" target="_blank" class="btn">Book Free Hairpatch Consultation</a>
+ <!-- Direct WhatsApp Consultation CTA Button -->
+<a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20Book%20a%20Free%20Hairpatch%20Consultation" target="_blank" class="btn whatsapp-hero-btn">
+  💬 Book Free Hairpatch Consultation
+</a>
   </section>
 
   <!-- Gallery Section: Focused purely on Hairpatches -->
@@ -78,15 +101,14 @@
   <p class="section-subtitle">Insta par dekhein kaise badalta hai look! Actual customer feedback aur live work.</p>
 
   <div class="reels-grid">
-    
+
     <!-- Reel Card 1 -->
     <div class="reel-card">
       <div class="video-container">
         <!-- Option A: Agar Video download karke upload karoge (Recommended) -->
-        <video controls poster="images/reel1-thumb.jpg">
-          <source src="videos/v1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <video class="auto-reel" autoplay muted loop playsinline poster="images/reel1-thumb.jpg">
+  <source src="videos/v1.mp4" type="video/mp4">
+</video>
       </div>
       <div class="reel-info">
         <h3>Natural Hairline Transformation</h3>
@@ -97,9 +119,22 @@
     <!-- Reel Card 2 -->
     <div class="reel-card">
       <div class="video-container">
-        <video controls poster="images/reel2-thumb.jpg">
-          <source src="videos/reel2.mp4" type="video/mp4">
-        </video>
+       <video class="auto-reel" autoplay muted loop playsinline poster="images/reel2-thumb.jpg">
+  <source src="videos/v2.mp4" type="video/mp4">
+</video>
+      </div>
+      <div class="reel-info">
+        <h3>Crown Area Density Fix</h3>
+        <p>Undetectable finish for young gents.</p>
+      </div>
+    </div> 
+ <!-- Reel Card 3 -->
+    <div class="reel-card">
+      <div class="video-container">
+       <!-- Video 3 -->
+<video class="auto-reel" autoplay muted loop playsinline poster="images/reel3-thumb.jpg">
+  <source src="videos/v44.mp4" type="video/mp4">
+</video>
       </div>
       <div class="reel-info">
         <h3>Crown Area Density Fix</h3>
@@ -107,8 +142,21 @@
       </div>
     </div>
 
-    <!-- Reel Card 3 -->
+    <!-- Reel Card 4 -->
     <div class="reel-card">
+      <div class="video-container">
+     <!-- Video 34-->
+<video class="auto-reel" autoplay muted loop playsinline poster="images/reel3-thumb.jpg">
+  <source src="videos/v4.mp4" type="video/mp4">
+</video>
+      </div>
+      <div class="reel-info">
+        <h3>Customer Live Review</h3>
+        <p>Sunte hain client ka real experience!</p>
+      </div>
+    </div>
+ <!-- Reel Card 4 -->
+    <!-- <div class="reel-card">
       <div class="video-container">
         <video controls poster="images/reel3-thumb.jpg">
           <source src="videos/reel3.mp4" type="video/mp4">
@@ -118,8 +166,7 @@
         <h3>Customer Live Review</h3>
         <p>Sunte hain client ka real experience!</p>
       </div>
-    </div>
-
+    </div>-->
   </div>
 
   <!-- Instagram Channel Call To Action -->
@@ -166,7 +213,160 @@
 
     </div>
   </section>
+<!-- Google Reviews Section (7 Reviews) -->
+<section id="reviews" class="container">
+  <span class="badge center-badge">⭐ Google Rating 4.9/5 (100+ Reviews)</span>
+  <h2 class="section-title">Hamare Happy Customers Ke Reviews</h2>
+  <p class="section-subtitle">Real feedback from real clients who transformed their look with us!</p>
 
+  <div class="reviews-grid">
+    
+    <!-- Review Card 1 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Shivani Bisht</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+       <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">"Very decent work in term of skin care & hair care.anu & puja & raj do work very efficiently. Staff is very good & the way they are working is pretty hygienic and upto mark. Staff behaviour is also very supportive. Kudos team. Very good work... Keep going team HUBS ☺️☺️☺️
+🙏2
+Best and verry good & affordable for hair and beauty treatments like.haircolour .hair botox .nanoplastia.facial.and waxing.mani.pedi.hair extension haircut services ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐10/10"</p>
+      <span class="review-date">1 month ago</span>
+    </div>
+
+    <!-- Review Card 2 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Devilraj Abhi</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">"Best salon for hair patch in reasonable price. Staff ka behaviour bohot acche se care karne wala hai aur finishing bilkul natural di hai."</p>
+      <span class="review-date">1 month ago</span>
+    </div>
+
+    <!-- Review Card 3 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Faiz Salmani</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">I traveled here from Gujarat to Hub Salon & Best Hair Wig Hair Patch to get a patch fitted. I really liked the way the patch worked. Best hair wig service in Noida, best price. AP residents can also benefit from the best service here. Best service, best behavior, good work 😊
+Best work, best price , Affordable price , Best behavior , Best hair wig , Best smoothing and facial work</p>
+      
+      <span class="review-date">2 weeks ago</span>
+    </div>
+
+    <!-- Review Card 4 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Aditya Kumar</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">"Mera hair loss ki wajah se confidence chala gaya tha. Hub Salon aakar hair patch lagwaya, ab me 10 saal chota lagta hu! Thanks to team."</p>
+      <span class="review-date">3 weeks ago</span>
+    </div>
+
+    <!-- Review Card 5 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Deepak Malhotra</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">"Very professional service for hair patch servicing and tape changing. Price reasonable hai aur staff expert hai."</p>
+      <span class="review-date">1 month ago</span>
+    </div>
+
+    <!-- Review Card 6 -->
+    <!-- <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Rohan Singh</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <span class="google-icon">G</span>
+      </div>
+      <p class="review-text">"100% human hair patch quality. Maintenance guideline bhi bohot ache se samjhayi. Must visit salon for hair wig and patch!"</p>
+      <span class="review-date">2 months ago</span>
+    </div> -->
+
+    <!-- Review Card 7 -->
+    <div class="review-card">
+      <div class="review-header">
+        <div class="user-info">
+          <h3>Manish Gupta</h3>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+       <span class="google-icon">
+  <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.11-6.72-4.96H1.29v3.15C3.26 21.3 7.31 24 12 24z"/>
+    <path fill="#FBBC05" d="M5.28 14.24c-.25-.72-.38-1.49-.38-2.24s.13-1.52.38-2.24V6.61H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.39l3.99-3.15z"/>
+    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.61l3.99 3.15c.95-2.85 3.6-4.96 6.72-4.96z"/>
+  </svg>
+</span>
+      </div>
+      <p class="review-text">"Shadi ke liye urgent hair patch karwaya tha. Service fast di aur natural hairline di. Sabhi ne taarif ki!"</p>
+      <span class="review-date">2 months ago</span>
+    </div>
+
+  </div>
+
+  <!-- Google Review Action Button -->
+  <div class="review-cta">
+    <a href="https://share.google/Y4pO1in3KwYAEolKI" target="_blank" class="btn google-btn">
+      📍 Google Par Aur Bhi Reviews Padhein
+    </a>
+  </div>
+</section>
  <!-- Contact Us Section -->
   <footer id="contact">
     <h2>Hub Salon Best Hair Wig Hairpatch</h2>
