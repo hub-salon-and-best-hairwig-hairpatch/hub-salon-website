@@ -25,6 +25,40 @@ window.addEventListener('load', () => {
       }
     });
   });
+  // Smart Scroll Audio / Video Auto-Pause Control
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("reelVideo");
+
+  if (video) {
+    // Intersection Observer to detect when video is in viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Screen par aane par video play karein
+            video.muted = false; // Unmute sound
+            let playPromise = video.play();
+
+            if (playPromise !== undefined) {
+              playPromise.catch((error) => {
+                // Agar browser auto-unmute block kare toh mute karke play karein
+                video.muted = true;
+                video.play();
+              });
+            }
+          } else {
+            // Upar ya niche scroll karne par audio & video pause karein
+            video.pause();
+            video.muted = true;
+          }
+        });
+      },
+      { threshold: 0.6 } // Jab video 60% dikhai de tabhi sound play hogi
+    );
+
+    observer.observe(video);
+  }
+});
 </script>
 <body>
 
@@ -146,8 +180,10 @@ window.addEventListener('load', () => {
     <div class="reel-card">
       <div class="video-container">
      <!-- Video 34-->
-<video class="auto-reel" autoplay muted loop playsinline poster="images/reel3-thumb.jpg">
+<!-- Last Reel Video Code -->
+<video id="reelVideo" class="reel-media" loop playsinline controls preload="metadata">
   <source src="videos/v4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
       </div>
       <div class="reel-info">
