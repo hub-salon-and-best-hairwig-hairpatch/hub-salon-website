@@ -26,9 +26,7 @@
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
-title{
 
-}
 body {
   background-color: var(--bg-main);
   color: var(--text-dark);
@@ -160,7 +158,7 @@ nav {
 }
 
 /* --- Before & After Gallery --- */
-.gallery-grid {
+/* .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
@@ -220,6 +218,66 @@ nav {
 .gallery-info p {
   color: var(--text-muted);
   font-size: 0.9rem;
+} */
+
+/* Single Composite Before-After Image Adjustment */
+/* Gallery Container & Layout Adjustments */
+.gallery-grid, .gallery-container {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: stretch;
+  gap: 15px !important;
+  flex-wrap: nowrap; /* Teeno ko ek hi line me rakhega */
+  overflow-x: auto; /* Small screens/mobile me smooth scrolling milegi */
+  padding-bottom: 10px;
+}
+
+/* Gallery Card Size Reduction */
+.gallery-card {
+  flex: 1 1 0;
+  min-width: 230px; /* Card size chota kar diya */
+  max-width: 340px; /* Maximum size limit */
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+  margin: 0 !important;
+}
+
+/* Gallery Image Wrapper */
+.gallery-images.single-image-wrapper {
+  display: block !important;
+  width: 100%;
+  height: 360px; /* Image container ki fixed, choti height */
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.gallery-images.single-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image bina distort hue perfect fit ho jayegi */
+  display: block;
+}
+
+/* Gallery Card Text Area */
+.gallery-info {
+  padding: 10px 12px !important;
+  text-align: center;
+}
+
+.gallery-info h3 {
+  font-size: 0.95rem !important; /* Title font chota */
+  margin-bottom: 4px !important;
+  color: #1e293b;
+}
+
+.gallery-info p {
+  font-size: 0.8rem !important; /* Description text chota */
+  color: #64748b;
+  line-height: 1.3;
 }
 /* --- Reels Showcase Section --- */
 .center-badge {
@@ -294,6 +352,7 @@ nav {
 }
 
 .service-card {
+
   background-color: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -414,4 +473,198 @@ footer p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* Rates Banner */
+/* .top-offer-bar {
+  background: #94a34f;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.highlight-tag {
+  background: #fde047;
+  color: #000000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+} */
+
+/* Address Box */
+.address-strip {
+  background: #f1f5f9;
+  border-left: 4px solid #2563eb;
+  padding: 8px 12px;
+  margin: 10px auto;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+/* Offers Page Styles */
+.offers-header {
+  background: #1e293b;
+  color: #ffffff;
+  padding: 20px 15px;
+  text-align: center;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: #fde047;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.offers-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px 80px 15px; /* Bottom space for sticky bar */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.offer-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+.offer-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.offer-actions {
+  padding: 12px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.claim-btn {
+  display: block;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+/* Top Fixed Offer Bar Styling */
+.top-fixed-bar {
+  background: #0f172a; /* Premium Dark Background */
+  color: #ffffff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  flex-wrap: wrap; /* Mobile friendly */
+  text-align: center;
+}
+
+.pulse-badge {
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  animation: pulse-glow 1.5s infinite;
+}
+
+/* Glowing effect for Offer Badge */
+@keyframes pulse-glow {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 8px rgba(225, 29, 72, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+
+.bar-text {
+  margin: 0;
+  color: #f8fafc;
+}
+
+.bar-text strong {
+  color: #fde047; /* Yellow highlight for Price */
+  font-size: 1rem;
+}
+
+.bar-call-btn {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Modern Animated Offer Banner */
+.offers-banner-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-left: 4px solid #e11d48;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  margin: 15px auto;
+  max-width: 900px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.offers-banner-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.25);
+  border-color: #e11d48;
+}
+
+.banner-badge {
+  background: #e11d48;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.banner-text {
+  font-size: 0.95rem;
+  flex: 1;
+  color: #f8fafc;
+}
+
+.banner-text strong {
+  color: #fde047; /* Highlighted Yellow */
+}
+
+.banner-arrow {
+  background: rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
