@@ -668,3 +668,44 @@ footer p {
   border-radius: 20px;
   white-space: nowrap;
 }
+/* Normal Welcome Banner */
+/* .welcome-banner-box {
+  margin: 15px auto 25px auto;
+  padding: 0 10px;
+  max-width: 900px;
+}
+
+.welcome-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  object-fit: cover;
+} */
+ /* Responsive Compact Welcome Banner */
+.welcome-banner-box {
+  margin: 10px auto 20px auto;
+  padding: 0 10px;
+  max-width: 250%; /* Banner ki overall width choti kar di */
+  width: 60%;
+}
+
+.welcome-banner-img {
+  width: 100%;
+  height: auto; /* Text distort/squeeze hone se bachayega */
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  object-fit: contain; /* Text aur content poora clear dikhega */
+}
+
+/* Mobile Screens Par Special Adjustment */
+@media (max-width: 600px) {
+  .welcome-banner-box {
+    max-width: 95%; /* Mobile me screen ke hisab se perfectly fit hoga */
+    margin: 8px auto 15px auto;
+  }
+}
