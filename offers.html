@@ -1,69 +1,461 @@
 <!DOCTYPE html>
-<html lang="hi">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Special Offers & Discounts | Hub Hair Patch</title>
+  <title>Exclusive Offers & Work Gallery | Hub Salon</title>
+  <!-- Dost ki main CSS file -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Premium Offer & Video Gallery Custom Enhancements */
+    .filter-tabs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 15px 0 25px 0;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+    
+    /* Smart Banner Fitting (No Content Cut) */
+    .offer-banner-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .offer-banner-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .banner-img-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .banner-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Full image visible, content safe */
+    }
+
+    /* Reel / Shorts Vertical Video Card Style (9:16 Ratio) */
+    .reel-card {
+      background: #000;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #334155;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .reel-wrapper {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      position: relative;
+      background: #090d16;
+    }
+    .reel-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .reel-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .reel-info-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px 12px 12px 12px;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+      color: #fff;
+      z-index: 2;
+    }
+  </style>
 </head>
+<body>
 
-<body class="offers-page">
-
-  <header class="offers-header">
-    <div class="container offers-header-inner">
-      <a href="index.html" class="back-btn">← Back to Home</a>
-      <div class="offers-intro">
-        <span class="badge">Special Offers</span>
-        <h1>Exclusive Salon Offers</h1>
-        <p>Limited-time discounts on hair patch, wigs, and beauty services.</p>
-      </div>
+  <!-- Top Announcement Bar -->
+  <div class="top-fixed-bar">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+      <span class="pulse-badge" style="background: linear-gradient(90deg, #f59e0b, #d97706); color: #ffffff; font-weight: 800; padding: 3px 8px; border-radius: 12px; font-size: 0.72rem;">ESTD. 2010</span>
+      <span class="pulse-badge">🔥 SPECIAL DEALS</span>
+      <p class="bar-text" style="margin: 0;">Hub Salon Ghaziabad | <a href="tel:+919876543210" class="bar-call-btn">📞 Book: +91 98765 43210</a></p>
     </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="container main-header">
+    <div class="logo">
+      <h2>Hub Salon <span style="color: #0284c7;">Offers & Work</span></h2>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">🏠 Home</a>
+      <a href="women.html">💄 Women</a>
+      <a href="offers.html" class="active">🔥 Offers & Gallery</a>
+    </nav>
   </header>
 
-  <main class="offers-page-main">
-    <div class="container">
-      <div class="offers-grid">
-        <article class="offer-card">
-          <div class="offer-media">
-            <img src="images/patch.jpeg" alt="Hair Patch Special Offer" loading="lazy">
-          </div>
-          <div class="offer-content">
-            <span class="offer-badge">Hot Deal</span>
-            <h3>Hair Patch Special</h3>
-            <p>Premium natural hair patch solutions starting from ₹2,999 with custom fitting and styling.</p>
-            <div class="offer-price">Starting at ₹2,999</div>
-            <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20claim%20Offer%201" target="_blank"
-              class="claim-btn">
-              Claim on WhatsApp
-            </a>
-          </div>
-        </article>
+  <!-- Quick Filter Bar -->
+  <div class="container">
+    <div class="filter-tabs">
+      <a href="#offers-section" class="tab-btn active">🔥 Special Offers (8)</a>
+      <a href="#videos-section" class="tab-btn">🎥 Work Videos & Reels (8)</a>
+      <a href="#photos-section" class="tab-btn">📸 Transformation Photos (6)</a>
+    </div>
+  </div>
 
-        <article class="offer-card">
-          <div class="offer-media">
-            <img src="images/g1.jpeg" alt="Ladies Wig Discount" loading="lazy">
-          </div>
-          <div class="offer-content">
-            <span class="offer-badge">Limited Time</span>
-            <h3>Ladies Wig Deal</h3>
-            <p>Affordable premium wigs starting from ₹5,999 with a polished finish and comfort-first fit.</p>
-            <div class="offer-price">Starting at ₹5,999</div>
-            <a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20claim%20Offer%202" target="_blank"
-              class="claim-btn">
-              Claim on WhatsApp
-            </a>
-          </div>
-        </article>
+  <!-- SECTION 1: OFFERS BANNERS (7-8 BANNERS GRID) -->
+  <section id="offers-section" class="container gallery-highlights-section" style="padding-top: 10px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+      <div>
+        <h2 class="section-title" style="margin-bottom: 2px;">🎁 Festival & Season Offers</h2>
+        <p class="section-subtitle">Aapke favorite salon services par sabse badi savings!</p>
+      </div>
+      <div style="background: #fef3c7; color: #92400e; border: 1px solid #fde68a; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">
+        ⏳ Offers expire soon!
       </div>
     </div>
-  </main>
 
+    <!-- 8 Offer Cards Grid -->
+    <div class="gallery-grid-box" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+      
+      <!-- Offer 1 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer1.jpeg" alt="Festival Hair Patch Package" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Flat 30% OFF - Premium Hair Patch</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Includes custom fitting + styling & 1 month maintenance free.</p>
+          <a href="https://wa.me/918700484042?text=I%20want%20to%20claim%2030%25%20OFF%20Hair%20Patch%20Offer" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 2 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-2.jpeg" alt="Keratin Smooth Combo" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Keratin & Hair Spa Combo @ ₹1,999</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Get shiny frizz-free smooth hair with deep nourish spa.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20Keratin%20Combo%201999" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-3.jpeg" alt="HydraFacial Glow Offer" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">HydraFacial + Anti-Tan @ ₹999</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">7-step deep skin rejuvenation & instant glow care.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20HydraFacial%20Offer" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 4 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-4.jpeg" alt="Bridal Grooming Offer" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Groom & Bridal Pre-Wedding 40% OFF</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Full head-to-toe makeover packages for special occasions.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20Bridal%20Groom%20Package" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 5 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-5.jpeg" alt="Hair Extension Special" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Permanent Hair Extensions Offer</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Free hair consultation & volume styling on booking.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20Extensions%20Offer" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 6 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-6.jpeg" alt="Hair Color & Highlights" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Global Hair Color + Balayage 25% OFF</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Ammonia-free premium hair colors by expert stylists.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20Hair%20Color%20Offer" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 7 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-7.jpeg" alt="Men Hair Patch Maintenance" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Hair Patch Refixing & Service Pass</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Buy 3 Service Passes & get 1 Service FREE!</p>
+          <a href="https://wa.me/8700484042?text=Claiming%20Patch%20Maintenance%20Offer" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Offer 8 -->
+      <div class="offer-banner-card">
+        <div class="banner-img-wrapper">
+          <img src="images/offer-8.jpeg" alt="Weekend Special Discount" loading="lazy">
+        </div>
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 1rem; color: #0f172a;">Weekend Early Bird Discount</h3>
+          <p style="margin: 0 0 10px 0; font-size: 0.8rem; color: #64748b;">Extra 10% OFF on bookings before 12:00 PM.</p>
+          <a href="https://wa.me/918700484042?text=Claiming%20Weekend%20Early%20Bird" class="claim-wa-btn" style="display: block; text-align: center; text-decoration: none; padding: 8px;">Claim Offer on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 40px auto; max-width: 1100px;">
+
+  <!-- SECTION 2: REEL FORMAT WORK VIDEOS (8-10 REELS GRID) -->
+  <!-- <section id="videos-section" class="container gallery-highlights-section">
+    <h2 class="section-title">🎬 Real Customer Work Videos (Reels)</h2>
+    <p class="section-subtitle">Watch live transformations, client reactions & invisible hair patch results</p> -->
+
+    <!-- 8 Vertical Reels Grid -->
+    <!-- <div class="gallery-grid-box" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));"> -->
+      
+      <!-- Video Reel 1 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Hair Patch</span>
+          <video controls preload="metadata" poster="images/video-thumb-1.jpg">
+            <source src="videos/reel-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Unbelievable Frontline Hairline</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 2 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Women Extensions</span>
+          <video controls preload="metadata" poster="images/video-thumb-2.jpg">
+            <source src="videos/reel-2.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Instant Hair Volume Magic</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 3 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Before / After</span>
+          <video controls preload="metadata" poster="images/video-thumb-3.jpg">
+            <source src="videos/reel-3.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">10 Years Younger Look!</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 4 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Keratin Smooth</span>
+          <video controls preload="metadata" poster="images/video-thumb-4.jpg">
+            <source src="videos/reel-4.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Silky Frizz-Free Shine</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 5 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Hair Wig Fitting</span>
+          <video controls preload="metadata" poster="images/video-thumb-5.jpg">
+            <source src="videos/reel-5.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">100% Breathable Mesh Wig</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 6 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Client Review</span>
+          <video controls preload="metadata" poster="images/video-thumb-6.jpg">
+            <source src="videos/reel-6.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Happy Customer Feedback</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 7 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ HydraFacial</span>
+          <video controls preload="metadata" poster="images/video-thumb-7.jpg">
+            <source src="videos/reel-7.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Glow Skin Treatment Process</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Video Reel 8 -->
+      <!-- <div class="reel-card">
+        <div class="reel-wrapper">
+          <span class="reel-badge">▶ Hair Patch Refix</span>
+          <video controls preload="metadata" poster="images/video-thumb-8.jpg">
+            <source src="videos/reel-8.mp4" type="video/mp4">
+          </video>
+          <div class="reel-info-overlay">
+            <p style="margin: 0; font-size: 0.85rem; font-weight: 700;">Quick Cleaning & Servicing</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <hr style="border: 0; height: 1px; background: #e2e8f0; margin: 40px auto; max-width: 1100px;">
+
+  <!-- SECTION 3: WORK PHOTOS (6 BEFORE/AFTER PHOTOS) -->
+  <section id="photos-section" class="container gallery-highlights-section">
+    <h2 class="section-title">📸 Transformation Photo Gallery</h2>
+    <p class="section-subtitle">HD close-up shots of hair patches, wigs & styling results</p>
+
+    <div class="gallery-grid-box" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: start;">
+      
+      <!-- Photo 1 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-1.jpg" alt="Men Hair Patch Result" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">Natural Crown Hair Patch</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">Seamless blend with side hair</p>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-2.jpg" alt="Women Hair Topper Result" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">Women Silk Top Topper</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">100% natural parting look</p>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-3.jpg" alt="Front Hairline Work" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">Invisible French Lace Frontline</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">Undetectable close-up view</p>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-4.jpg" alt="Keratin Treatment Transformation" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">Hair Smoothing Transformation</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">Frizz control & intense shine</p>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-5.jpg" alt="Custom Hair Wig" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">Full Head Human Hair Wig</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">Custom tailored for perfect fit</p>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="gallery-card" style="padding: 0; overflow: hidden;">
+        <div style="width: 100%; background: #000;">
+          <img src="images/work-photo-6.jpg" alt="Facial Glow Result" style="width: 100%; height: auto; display: block; object-fit: contain;" loading="lazy">
+        </div>
+        <div style="padding: 10px 14px; border-top: 1px solid #f1f5f9;">
+          <h3 style="margin: 0; font-size: 0.95rem; color: #0f172a;">HydraFacial Glow Result</h3>
+          <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #64748b;">Instant clear & glowing skin</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Sticky Booking Bar for Mobile -->
   <div class="sticky-bottom-bar">
-    <a href="tel:+918700484042" class="sticky-btn sticky-call">📞 Call Now</a>
-    <a href="https://wa.me/918700484042" target="_blank" class="sticky-btn sticky-wa">💬 WhatsApp</a>
+    <a href="tel:+918700484042" class="sticky-call">📞 Call Salon</a>
+    <a href="https://wa.me/918700484042?text=Hi,%20I%20saw%20your%20offers%20page%20and%20want%20to%20book%20an%20appointment" class="sticky-wa">💬 WhatsApp Booking</a>
   </div>
 
 </body>
-
 </html>

@@ -6,6 +6,28 @@
   <title>Women Beauty & Salon Services | Hub Salon</title>
   <!-- Dost ki exact main CSS load ho rahi hai -->
   <link rel="stylesheet" href="style.css">
+  <!-- Force Non-Fixed Navbar ONLY for women.html -->
+<style>
+  /* Page ke sabhi navbar classes ko reset kar dega */
+  body.women-page .navbar,
+  .navbar,
+  header,
+  .header-main,
+  nav {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+  }
+
+  /* Body ki padding-top reset karega agar fixed navbar ki wajah se space bani thi */
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+</style>
 </head>
 <body>
 
@@ -19,7 +41,7 @@
     <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
       <span class="pulse-badge" style="background: linear-gradient(90deg, #f59e0b, #d97706); color: #ffffff; font-weight: 800; padding: 3px 8px; border-radius: 12px; font-size: 0.72rem; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);">ESTD. 2010</span>
       <span class="pulse-badge">✨ WOMEN SPECIAL</span>
-      <p class="bar-text" style="margin: 0;">Hub Salon Women Beauty Care | <a href="tel:+919876543210" class="bar-call-btn">📞 Book: +91 98765 43210</a></p>
+      <p class="bar-text" style="margin: 0;">Hub Salon Women Beauty Care | <a href="tel:+918700484042" class="bar-call-btn">📞 Book: +91 8700484042</a></p>
     </div>
   </div>
   <!-- Header Navigation -->
@@ -27,23 +49,75 @@
     <div class="logo">
       <h2>Hub Salon <span style="color: #0284c7;">Women</span></h2>
     </div>
-    <nav class="nav-links">
-      <a href="index.html">🏠 Home</a>
-      <a href="women.html" class="active">💄 Women</a>
-      <a href="offers.html">🔥 Offers</a>
-    </nav>
-  </header>
+   <!-- Compact Navbar for Women Page -->
+<!-- <nav class="
+ navbar" style="padding: 6px 16px; min-height: 50px; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0. -->
+  <!-- Women Page Specific Non-Sticky / Non-Fixed Compact Navbar -->
+<!-- Women Page Compact Navbar with Instagram Icon -->
+<nav class="navbar" style="padding: 8px 16px; min-height: 50px; background: #ffffff; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9;">
+  
+  <!-- Logo Section -->
+  <div class="logo-wrapper" style="display: flex; align-items: center;">
+    <a href="index.html" class="logo"><span class="mark">HS</span> Hub Salon</a>
+  </div>
+
+  <!-- Links & Social Section -->
+  <ul class="nav-links" style="display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; align-items: center;">
+    <li><a href="#services" style="font-size: 0.85rem; font-weight: 600; color: #334155; text-decoration: none;">Services</a></li>
+    <li><a href="#offers" style="font-size: 0.85rem; font-weight: 600; color: #334155; text-decoration: none;">Offers</a></li>
+    <li><a href="#nail-art" style="font-size: 0.85rem; font-weight: 600; color: #e11d48; text-decoration: none;">Nail Art ✨</a></li>
+    
+    <!-- Professional Instagram Link -->
+    <li>
+      <a href="https://instagram.com/hub_salon_and_academy" target="_blank" rel="noopener noreferrer" title="Follow us on Instagram" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #ffffff; text-decoration: none; box-shadow: 0 2px 6px rgba(220, 39, 67, 0.25);">
+        <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+    </li>
+
+    <!-- WhatsApp CTA -->
+    <li>
+      <a href="https://wa.me/918700484042?text=Hi%20I%20want%20to%20book%20Women%20Services" style="background-color: #25D366; color: #ffffff; padding: 6px 14px; font-size: 0.8rem; font-weight: 600; border-radius: 20px; text-decoration: none; display: inline-block;">
+        Book Now
+      </a>
+    </li>
+  </ul>
+
+</nav>
+</header>
 
   <!-- Hero Banner for Women Services -->
-  <section class="container welcome-banner-box" style="text-align: center;">
-    <span class="pulse-badge" style="background: #0284c7; margin-bottom: 10px; display: inline-block;">Exclusive Salon for Women</span>
-    <h1 style="margin: 10px 0 8px 0;">Women Hair Patch, Extensions & Beauty Care</h1>
-    <p class="section-subtitle" style="margin-bottom: 18px;">Get natural-looking hair solutions, smoothing, facials & bridal grooming by experts.</p>
-    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-      <a href="tel:+919876543210" class="claim-wa-btn" style="background: #0284c7; text-decoration: none;">📞 Call for Appointment</a>
-      <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20know%20about%20Women%20Salon%20Services" class="claim-wa-btn" style="background: #25d366; text-decoration: none;">💬 WhatsApp Booking</a>
+   <!-- Hero Section (Clean Image-Focused) -->
+<section id="hero-women" style="position: relative; width: 100%; min-height: 70vh; display: flex; align-items: flex-end; justify-content: center; background: url('images/women-hero.png') center/cover no-repeat; overflow: hidden; padding: 30px 20px;">
+  
+  <!-- Very Light Gradient Overlay at bottom for button readability -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.6) 100%); z-index: 1;"></div>
+
+  <!-- Minimal Content at Bottom -->
+  <div style="position: relative; z-index: 2; max-width: 700px; text-align: center; color: #ffffff; margin-bottom: 10px;">
+    
+    <!-- Single Line Title -->
+    <h1 style="font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; margin: 0 0 12px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.7);">
+      Salon &amp; Hair Care Services At Home
+    </h1>
+
+    <!-- Direct WhatsApp Button -->
+    <div style="display: flex; justify-content: center;">
+      <a href="https://wa.me/918700484042?text=Hi%20I%20want%20to%20book%20a%20Women%20Service" style="display: flex; align-items: center; gap: 8px; background-color: #25D366; color: #ffffff; text-decoration: none; font-size: 0.95rem; font-weight: 700; padding: 10px 24px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        Book Appointment
+      </a>
     </div>
-  </section>
+
+  </div>
+</section>
+ ass="section-subtitle" style="margin-bottom: 18px;">Get natural-looking hair solutions, smoothing, facials & bridal grooming by experts.</p>
+    <!-- <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:+918700484042" class="claim-wa-btn" style="background: #0284c7; text-decoration: none;">📞 Call for Appointment</a>
+      <a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20know%20about%20Women%20Salon%20Services" class="claim-wa-btn" style="background: #25d366; text-decoration: none;">💬 WhatsApp Booking</a>
+    </div>
+  </section> --> -->
 
   <!-- Women Services Grid Section -->
   <section class="container gallery-highlights-section">
@@ -64,7 +138,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: auto;">
             <span style="font-weight: 700; color: #0284c7; font-size: 1rem;">From ₹3,999</span>
-            <a href="https://wa.me/919876543210?text=Interested%20in%20Women%20Hair%20Patch" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
+            <a href="https://wa.me/918700484042?text=Interested%20in%20Women%20Hair%20Patch" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
           </div>
         </div>
       </div>
@@ -81,7 +155,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: auto;">
             <span style="font-weight: 700; color: #0284c7; font-size: 1rem;">From ₹4,999</span>
-            <a href="https://wa.me/919876543210?text=Interested%20in%20Hair%20Extensions" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
+            <a href="https://wa.me/918700484042?text=Interested%20in%20Hair%20Extensions" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
           </div>
         </div>
       </div>
@@ -98,7 +172,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: auto;">
             <span style="font-weight: 700; color: #0284c7; font-size: 1rem;">From ₹999</span>
-            <a href="https://wa.me/919876543210?text=Interested%20in%20Facial%20Services" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
+            <a href="https://wa.me/918700484042?text=Interested%20in%20Facial%20Services" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
           </div>
         </div>
       </div>
@@ -115,7 +189,7 @@
           </div>
           <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 12px; margin-top: auto;">
             <span style="font-weight: 700; color: #0284c7; font-size: 1rem;">From ₹2,499</span>
-            <a href="https://wa.me/919876543210?text=Interested%20in%20Keratin%20Smoothing" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
+            <a href="https://wa.me/918700484042?text=Interested%20in%20Keratin%20Smoothing" class="claim-wa-btn" style="padding: 8px 14px; font-size: 0.82rem; text-decoration: none;">Book Now</a>
           </div>
         </div>
       </div>
@@ -126,7 +200,7 @@
   <!-- Sticky Mobile Bar (Matching Dost's Mobile Navigation) -->
   <div class="sticky-bottom-bar">
     <a href="tel:+919876543210" class="sticky-call">📞 Call Now</a>
-    <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20book%20Women%20Salon%20Service" class="sticky-wa">💬 WhatsApp</a>
+    <a href="https://wa.me/918700484042?text=Hi,%20I%20want%20to%20book%20Women%20Salon%20Service" class="sticky-wa">💬 WhatsApp</a>
   </div>
 
 </body>
