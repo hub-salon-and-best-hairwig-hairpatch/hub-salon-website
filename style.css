@@ -92,7 +92,7 @@ a {
 }
 
 /* --- Top offer bar --- */
-.top-fixed-bar {
+/* .top-fixed-bar {
   background: var(--ink);
   color: var(--paper);
   padding: 0.65rem 1rem;
@@ -135,8 +135,59 @@ a {
   font-weight: 600;
   margin-left: 0.4rem;
   border-bottom: 1px solid rgba(223, 174, 124, 0.4);
+} */
+/* Top Bar ka overall size aur padding badhane ke liye */
+.top-fixed-bar {
+  padding: 12px 20px !important; /* Pehle se zyada uunchai (height) aur space */
+  min-height: 50px;              /* Minimum height fix karne ke liye */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;                     /* Items ke beech ka gap */
 }
 
+/* Offer Text ka font size badhane ke liye */
+.top-fixed-bar .bar-text {
+  font-size: 22px !important;    /* Text bada karne ke liye (Aap 20px bhi kar sakte hain) */
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Bold prices (₹2,999 / ₹5,999) ko highlight karne ke liye */
+.top-fixed-bar .bar-text strong {
+  font-size: 26px;               /* Numbers ko aur bada dikhane ke liye */
+}
+
+/* Special Offer Badge ka size badhane ke liye */
+.top-fixed-bar .pulse-badge {
+  font-size: 14px !important;
+  padding: 6px 14px !important;  /* Badge ko thoda bada aur prominent banane ke liye */
+}
+
+/* Call Button ka size badhane ke liye */
+.top-fixed-bar .bar-call-btn {
+  font-size: 16px !important;    /* Button text bada */
+  padding: 8px 18px !important;  /* Button ka clickable area bada */
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Mobile Screens ke liye responsive adjustments */
+@media (max-width: 768px) {
+  .top-fixed-bar {
+    padding: 10px 10px !important;
+    flex-wrap: wrap;             /* Mobile par text cut-off na ho */
+  }
+  
+  .top-fixed-bar .bar-text {
+    font-size: 15px !important;
+  }
+  
+  .top-fixed-bar .bar-call-btn {
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+  }
+}
 /* --- Header & Navigation --- */
 header {
   background: rgba(250, 247, 242, 0.92);
@@ -1187,12 +1238,18 @@ footer>.container>p {
   font-weight: bold;
   border-radius: 4px;
 }
-
 .product-img {
+  width: 100%;
+  height: 180px; /* Box ka height jaisa thha waise hi rahega */
+  object-fit: contain !important; /* Isse poori image box ke andar fit ho jayegi, cut nahi hogi */
+  background-color: #f9f9f9; /* Agar image square/chhoti ho toh sides me clean light background dikhega */
+  display: block;
+}
+/* .product-img {
   width: 100%;
   height: 170px;
   object-fit: cover;
-}
+} */
 
 .product-info { padding: 12px; }
 
